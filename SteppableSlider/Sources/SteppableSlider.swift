@@ -8,17 +8,8 @@
 
 import UIKit
 
-@objc public protocol SteppableSliderDataSource: class {
-    func numberOfSteps(in slider: SteppableSlider) -> Int
-    func viewForSteps(in slider: SteppableSlider) -> UIView?
-}
-
 @IBDesignable open class SteppableSlider: UISlider {
     // MARK: IBInspectable
-    @IBInspectable public var useStep: Bool {
-        get { return _useStep }
-        set { _useStep = newValue }
-    }
     @IBInspectable public var useHapticFeedback: Bool {
         get { return _useHapticFeedback }
         set { _useHapticFeedback = newValue }
@@ -27,36 +18,21 @@ import UIKit
         get { return _expandThumbRectToEdges }
         set { _expandThumbRectToEdges = newValue }
     }
-
-    @IBOutlet public weak var stepDataSource: SteppableSliderDataSource? {
-        didSet {
-            updateStepValue()
-        }
+    @IBInspectable public var stepValue: Float {
+        get { return _stepValue }
+        set { _stepValue = newValue }
     }
 
     // MARK: Private
-    private var _useStep: Bool = false
+    private var _stepValue: Float = 0
     private var _useHapticFeedback: Bool = false
     private var _expandThumbRectToEdges: Bool = false
     
-    private var numberOfSteps: Int {
-        return stepDataSource?.numberOfSteps(in: self) ?? 0
-    }
     private var isStepEnabled: Bool {
-        return useStep && stepValue > 0
+        return stepValue > 0
     }
 
-    private var stepValue: Float = 0
     private var latestValueForFeedback: Float = 0
-    private var stepLineStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.isUserInteractionEnabled = false
-        stackView.axis = .horizontal
-        stackView.alignment = .center
-        stackView.distribution = .equalSpacing
-        return stackView
-    }()
 
     // MARK: Override
     override open var value: Float {
@@ -83,16 +59,6 @@ import UIKit
         }
     }
     
-    override open func prepareForInterfaceBuilder() {
-        super.prepareForInterfaceBuilder()
-        addStepLineIfNeeded()
-    }
-
-    override open func layoutSubviews() {
-        super.layoutSubviews()
-        addStepLineIfNeeded()
-    }
-
     override open func thumbRect(forBounds bounds: CGRect, trackRect rect: CGRect, value: Float) -> CGRect {
         let unadjustedThumbrect = super.thumbRect(forBounds: bounds, trackRect: rect, value: value)
         guard expandThumbRectToEdges else { return unadjustedThumbrect }
@@ -104,26 +70,5 @@ import UIKit
         var origin = unadjustedThumbrect.origin
         origin.x += offsetForValue
         return CGRect(origin: origin, size: unadjustedThumbrect.size)
-    }
-
-    // MARK: Private
-    private func updateStepValue() {
-        stepValue = numberOfSteps > 1 ? maximumValue / Float(numberOfSteps - 1) : 0
-    }
-
-    private func addStepLineIfNeeded() {
-        guard let dataSoruce = stepDataSource, numberOfSteps > 1, stepLineStackView.subviews.isEmpty else { return }
-
-        for _ in 0 ..< dataSoruce.numberOfSteps(in: self) {
-            guard let stepView = dataSoruce.viewForSteps(in: self) else { return }
-            stepView.isUserInteractionEnabled = false
-            stepView.layer.zPosition = -1
-            stepLineStackView.addArrangedSubview(stepView)
-        }
-        addSubview(stepLineStackView)
-
-        stepLineStackView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        stepLineStackView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        stepLineStackView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
     }
 }

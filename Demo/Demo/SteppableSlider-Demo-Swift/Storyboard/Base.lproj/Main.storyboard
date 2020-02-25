@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Step Data Source-->
+        <!--SteppableSlider-Demo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SteppableSlider_Demo_Swift" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ie1-ok-oJi">
-                                <rect key="frame" x="20" y="118" width="374" height="193"/>
+                                <rect key="frame" x="20" y="118" width="374" height="194"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SteppableSlider Options" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnS-L9-cxJ">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
@@ -29,25 +29,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4sG-YV-ZKj">
-                                        <rect key="frame" x="0.0" y="60" width="374" height="31"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use step" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSA-xG-ocf">
-                                                <rect key="frame" x="0.0" y="0.0" width="317" height="31"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UVo-na-a0b">
-                                                <rect key="frame" x="325" y="0.0" width="51" height="31"/>
-                                                <connections>
-                                                    <action selector="switchValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Kz0-hd-FcD"/>
-                                                </connections>
-                                            </switch>
-                                        </subviews>
-                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Xzm-o1-ayG">
-                                        <rect key="frame" x="0.0" y="111" width="374" height="31"/>
+                                        <rect key="frame" x="0.0" y="60" width="374" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use haptic feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvf-ga-4mq">
                                                 <rect key="frame" x="0.0" y="0.0" width="317" height="31"/>
@@ -64,7 +47,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fGC-CW-bVL">
-                                        <rect key="frame" x="0.0" y="162" width="374" height="31"/>
+                                        <rect key="frame" x="0.0" y="111" width="374" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expand thumb rect to edge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DU5-hz-2Og">
                                                 <rect key="frame" x="0.0" y="0.0" width="317" height="31"/>
@@ -80,10 +63,36 @@
                                             </switch>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DWc-xC-yjw">
+                                        <rect key="frame" x="0.0" y="162" width="374" height="32"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Step value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghv-Ev-Aud">
+                                                <rect key="frame" x="0.0" y="0.0" width="234" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vp4-5c-VrY">
+                                                <rect key="frame" x="242" y="0.0" width="30" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="Fbn-cq-CNF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="z4q-LS-YXX">
+                                                <rect key="frame" x="280" y="0.0" width="94" height="32"/>
+                                                <connections>
+                                                    <action selector="stepperValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="aOc-nA-BFa"/>
+                                                </connections>
+                                            </stepper>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Wwz-Op-daS">
-                                <rect key="frame" x="20" y="351" width="374" height="141"/>
+                                <rect key="frame" x="20" y="352" width="374" height="141"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SteppableSlider Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jy-rx-fUH">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
@@ -107,7 +116,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0i-XE-HlX">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0i-XE-HlX">
                                                 <rect key="frame" x="324" y="0.0" width="50" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="a2y-Y8-bPe"/>
@@ -118,16 +127,18 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="H3U-Cu-Tk9" customClass="SteppableSlider" customModule="SteppableSlider">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="H3U-Cu-Tk9" customClass="SteppableSlider" customModule="SteppableSlider">
                                         <rect key="frame" x="-2" y="111" width="378" height="31"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="expandThumbRectToEdges" value="NO"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="useHapticFeedback" value="YES"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="useStep" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="stepValue">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="bAW-HB-qfA"/>
-                                            <outlet property="stepDataSource" destination="BYZ-38-t0r" id="HNw-7L-3mH"/>
                                         </connections>
                                     </slider>
                                 </subviews>
@@ -149,8 +160,9 @@
                     <connections>
                         <outlet property="expandThumbRectSwitch" destination="86g-f2-SOo" id="crs-lE-zcX"/>
                         <outlet property="slider" destination="H3U-Cu-Tk9" id="HCo-Km-LYx"/>
+                        <outlet property="stepValueLabel" destination="Vp4-5c-VrY" id="dMm-UN-6MJ"/>
+                        <outlet property="stepValueStepper" destination="z4q-LS-YXX" id="z1h-WR-YW9"/>
                         <outlet property="useHapticFeedbackSwitch" destination="DjL-pZ-BJg" id="K3Q-Xx-sHr"/>
-                        <outlet property="useStepSwitch" destination="UVo-na-a0b" id="hEr-0A-N0n"/>
                         <outlet property="valueLabel" destination="M0i-XE-HlX" id="W7q-Ra-cdb"/>
                     </connections>
                 </viewController>
