@@ -8,24 +8,37 @@
 
 import UIKit
 
-public protocol SteppableSliderDataSource: class {
+@objc public protocol SteppableSliderDataSource: class {
     func numberOfSteps(in slider: SteppableSlider) -> Int
     func viewForSteps(in slider: SteppableSlider) -> UIView?
 }
 
-open class SteppableSlider: UISlider {
-    // MARK: Public
-    public var useStep: Bool = false
-    public var useHapticFeedback: Bool = false
-    public var expandThumbRectToEdges: Bool = false
+@IBDesignable open class SteppableSlider: UISlider {
+    // MARK: IBInspectable
+    @IBInspectable public var useStep: Bool {
+        get { return _useStep }
+        set { _useStep = newValue }
+    }
+    @IBInspectable public var useHapticFeedback: Bool {
+        get { return _useHapticFeedback }
+        set { _useHapticFeedback = newValue }
+    }
+    @IBInspectable public var expandThumbRectToEdges: Bool {
+        get { return _expandThumbRectToEdges }
+        set { _expandThumbRectToEdges = newValue }
+    }
 
-    public weak var stepDataSource: SteppableSliderDataSource? {
+    @IBOutlet public weak var stepDataSource: SteppableSliderDataSource? {
         didSet {
             updateStepValue()
         }
     }
 
     // MARK: Private
+    private var _useStep: Bool = false
+    private var _useHapticFeedback: Bool = false
+    private var _expandThumbRectToEdges: Bool = false
+    
     private var numberOfSteps: Int {
         return stepDataSource?.numberOfSteps(in: self) ?? 0
     }
@@ -69,6 +82,11 @@ open class SteppableSlider: UISlider {
             }
         }
     }
+    
+    override open func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        addStepLineIfNeeded()
+    }
 
     override open func layoutSubviews() {
         super.layoutSubviews()
@@ -98,6 +116,7 @@ open class SteppableSlider: UISlider {
 
         for _ in 0 ..< dataSoruce.numberOfSteps(in: self) {
             guard let stepView = dataSoruce.viewForSteps(in: self) else { return }
+            stepView.isUserInteractionEnabled = false
             stepView.layer.zPosition = -1
             stepLineStackView.addArrangedSubview(stepView)
         }
