@@ -13,7 +13,6 @@ final class ViewController: UIViewController {
     @IBOutlet private var slider: SteppableSlider!
     @IBOutlet private var valueLabel: UILabel!
     @IBOutlet private var useHapticFeedbackSwitch: UISwitch!
-    @IBOutlet private var expandThumbRectSwitch: UISwitch!
     @IBOutlet private var stepValueLabel: UILabel!
     @IBOutlet private var stepValueStepper: UIStepper!
     
@@ -28,7 +27,6 @@ final class ViewController: UIViewController {
         stepValueLabel.text = "\(Int(slider.stepValue))"
         stepValueStepper.value = Double(slider.stepValue)
         useHapticFeedbackSwitch.isOn = slider.useHapticFeedback
-        expandThumbRectSwitch.isOn = slider.expandThumbRectToEdges
     }
     
     private func updateValueLabel() {
@@ -42,8 +40,6 @@ final class ViewController: UIViewController {
     @IBAction private func switchValueChanged(_ sender: UISwitch) {
         if sender == useHapticFeedbackSwitch {
             slider.useHapticFeedback = sender.isOn
-        } else if sender == expandThumbRectSwitch {
-            slider.expandThumbRectToEdges = sender.isOn
         }
         
         slider.value = slider.maximumValue / 2
