@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0ao-2s-6Qj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0ao-2s-6Qj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ie1-ok-oJi">
-                                <rect key="frame" x="20" y="118" width="374" height="194"/>
+                                <rect key="frame" x="20" y="118" width="374" height="143"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SteppableSlider Options" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnS-L9-cxJ">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
@@ -46,25 +46,8 @@
                                             </switch>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fGC-CW-bVL">
-                                        <rect key="frame" x="0.0" y="111" width="374" height="31"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expand thumb rect to edge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DU5-hz-2Og">
-                                                <rect key="frame" x="0.0" y="0.0" width="317" height="31"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="86g-f2-SOo">
-                                                <rect key="frame" x="325" y="0.0" width="51" height="31"/>
-                                                <connections>
-                                                    <action selector="switchValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Q3v-cV-v6I"/>
-                                                </connections>
-                                            </switch>
-                                        </subviews>
-                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DWc-xC-yjw">
-                                        <rect key="frame" x="0.0" y="162" width="374" height="32"/>
+                                        <rect key="frame" x="0.0" y="111" width="374" height="32"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Step value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghv-Ev-Aud">
                                                 <rect key="frame" x="0.0" y="0.0" width="234" height="32"/>
@@ -92,7 +75,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Wwz-Op-daS">
-                                <rect key="frame" x="20" y="352" width="374" height="141"/>
+                                <rect key="frame" x="20" y="301" width="374" height="141"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SteppableSlider Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jy-rx-fUH">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
@@ -158,7 +141,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="SteppableSlider-Demo" id="tMa-S9-nUO"/>
                     <connections>
-                        <outlet property="expandThumbRectSwitch" destination="86g-f2-SOo" id="crs-lE-zcX"/>
                         <outlet property="slider" destination="H3U-Cu-Tk9" id="HCo-Km-LYx"/>
                         <outlet property="stepValueLabel" destination="Vp4-5c-VrY" id="dMm-UN-6MJ"/>
                         <outlet property="stepValueStepper" destination="z4q-LS-YXX" id="z1h-WR-YW9"/>
