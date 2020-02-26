@@ -20,7 +20,11 @@ pod 'SteppableSlider', '~> 0.0.1'
 ```
 
 ### Swift Package Manager
-// TODO:
+```
+dependencies: [
+    .package(url: "https://github.com/Mildwhale/SteppableSlider.git")
+]
+```
 
 ## Requirements
 * iOS 10.0+  
