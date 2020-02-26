@@ -23,5 +23,5 @@ pod 'SteppableSlider', '~> 0.0.1'
 // TODO:
 
 ## Requirements
-iOS 10.0+
-Swift 4+
+* iOS 10.0+  
+* Swift 4+
