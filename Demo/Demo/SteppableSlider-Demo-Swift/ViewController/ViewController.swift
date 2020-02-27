@@ -14,7 +14,9 @@ final class ViewController: UIViewController {
     @IBOutlet private var valueLabel: UILabel!
     @IBOutlet private var useHapticFeedbackSwitch: UISwitch!
     @IBOutlet private var stepValueLabel: UILabel!
-    @IBOutlet private var stepValueStepper: UIStepper!
+    @IBOutlet private var numberOfStepsLabel: UILabel!
+    @IBOutlet private var numberOfStepsStepper: UIStepper!
+    @IBOutlet private var currentStepLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,30 +26,30 @@ final class ViewController: UIViewController {
     }
     
     private func initLayout() {
-        stepValueLabel.text = "\(Int(slider.stepValue))"
-        stepValueStepper.value = Double(slider.stepValue)
+        numberOfStepsStepper.value = Double(slider.numberOfSteps)
         useHapticFeedbackSwitch.isOn = slider.useHapticFeedback
+        
+        updateLabels()
     }
     
-    private func updateValueLabel() {
+    private func updateLabels() {
         valueLabel.text = "\(slider.value)"
+        stepValueLabel.text = "\(slider.stepValue)"
+        numberOfStepsLabel.text = "\(slider.numberOfSteps)"
+        currentStepLabel.text = "\(slider.currentStepIndex)"
     }
     
     @IBAction private func sliderValueChanged(_ sender: UISlider) {
-        updateValueLabel()
+        updateLabels()
     }
     
     @IBAction private func switchValueChanged(_ sender: UISwitch) {
-        if sender == useHapticFeedbackSwitch {
-            slider.useHapticFeedback = sender.isOn
-        }
-        
-        slider.value = slider.maximumValue / 2
-        updateValueLabel()
+        slider.useHapticFeedback = sender.isOn
     }
     
     @IBAction private func stepperValueChanged(_ sender: UIStepper) {
-        stepValueLabel.text = "\(Int(sender.value))"
-        slider.stepValue = Float(sender.value)
+        slider.numberOfSteps = Int(numberOfStepsStepper.value)
+        slider.value = 0
+        updateLabels()
     }
 }
