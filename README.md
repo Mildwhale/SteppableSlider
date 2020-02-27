@@ -1,7 +1,8 @@
 # SteppableSlider
 
 ## Features
-SteppableSlider is a custom UISlider that provides steps.
+SteppableSlider is a custom UISlider that provides steps.  
+![image](https://mildwhale.github.io/assets/images/steppableslider-sample.gif)
 
 ## Examples
 ### Set slider
