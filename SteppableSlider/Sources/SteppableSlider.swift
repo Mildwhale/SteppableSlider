@@ -29,7 +29,7 @@ import UIKit
     // MARK: - Value
     // MARK: IBInspectable
     
-    /// Number of steps for slider and it must greater than one.
+    /// Number of steps for slider and it must greater than one. The default value of this property is zero.
     @IBInspectable public var numberOfSteps: Int {
         get { return _numberOfSteps }
         set {
@@ -37,7 +37,7 @@ import UIKit
             updateStepValue()
         }
     }
-    /// Determines whether haptic feedback is used when steps change.
+    /// Determines whether haptic feedback is used when steps change. The default value of this property is true.
     @IBInspectable public var useHapticFeedback: Bool {
         get { return _useHapticFeedback }
         set { _useHapticFeedback = newValue }
