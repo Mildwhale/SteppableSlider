@@ -8,9 +8,12 @@
 
 import UIKit
 
+/// SteppableSlider is a custom UISlider that provides steps.
 @IBDesignable open class SteppableSlider: UISlider {
     // MARK: - Value
     // MARK: IBInspectable
+    
+    /// Number of steps for slider and it must greater than one.
     @IBInspectable public var numberOfSteps: Int {
         get { return _numberOfSteps }
         set {
@@ -18,13 +21,17 @@ import UIKit
             updateStepValue()
         }
     }
+    /// Determines whether haptic feedback is used when steps change.
     @IBInspectable public var useHapticFeedback: Bool {
         get { return _useHapticFeedback }
         set { _useHapticFeedback = newValue }
     }
     
     // MARK: Public
+    
+    /// Get the index of the current step. This starts at zero.
     public var currentStepIndex: Int { return _currentStepIndex }
+    /// Get the value of the interval of steps.
     public var stepValue: Float { return _stepValue }
 
     // MARK: Private
