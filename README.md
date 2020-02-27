@@ -1,20 +1,31 @@
 # SteppableSlider
 
 ## Features
-// TODO:
+SteppableSlider is a custom UISlider that provides steps.
 
 ## Examples
-// TODO:
+### Set slider
+```swift
+let slider = SteppableSlider()
+slider.numberOfSteps = 4
+slider.useHapticFeedback = true // Default
+slider.addTarget(self, action: #selector(sliderValueChanged(_:)), for: .valueChanged)
+```
+
+### Get step index
+```swift
+@objc func sliderValueChanged(_ sender: SteppableSlider) {
+    print(sender.currentStepIndex) // 0 ~ 3
+}
+```
 
 ## Installation
 ### Carthage
-[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate SteppableSlider into your Xcode project using Carthage, specify it in your `Cartfile`:  
 ```
 github "Mildwhale/SteppableSlider" ~> 0.0.1
 ```
 
 ### CocoaPods
-[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate SteppableSlider into your Xcode project using CocoaPods, specify it in your `Podfile`:  
 ``` 
 pod 'SteppableSlider', '~> 0.0.1' 
 ```
