@@ -6,7 +6,7 @@
 `RxSwift` is supported.
 
 ## Usage
-You can add `SteppableSlider` use code or storybord. Its fully compatible for interface builder.
+You can use `SteppableSlider` with code or storyboard. Its fully compatible for interface builder.
 
 ### Swift
 ```swift
