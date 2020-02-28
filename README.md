@@ -23,8 +23,9 @@ slider.addTarget(self, action: #selector(sliderValueChanged(_:)), for: .valueCha
 
 ### RxSwift
 ```swift
+import RxSwift
+import RxCocoa
 import SteppableSlider
-import RxSteppableSlider
 
 let slider = SteppableSlider()
 slider.numberOfSteps = 4
