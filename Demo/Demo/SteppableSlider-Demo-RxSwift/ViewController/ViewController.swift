@@ -23,7 +23,9 @@
 //  THE SOFTWARE.
 
 import UIKit
+import RxSwift
 import SteppableSlider
+import RxSteppableSlider
 
 final class ViewController: UIViewController {
     @IBOutlet private var slider: SteppableSlider!
@@ -34,42 +36,53 @@ final class ViewController: UIViewController {
     @IBOutlet private var numberOfStepsStepper: UIStepper!
     @IBOutlet private var currentStepLabel: UILabel!
     
+    private let disposeBag: DisposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
-        initLayout()
+        bind()
+        subscribe()
     }
     
-    private func initLayout() {
-        numberOfStepsStepper.value = Double(slider.numberOfSteps)
-        useHapticFeedbackSwitch.isOn = slider.useHapticFeedback
+    private func bind() {
+        slider.rx.value
+            .map { "\($0)" }
+            .bind(to: valueLabel.rx.text)
+            .disposed(by: disposeBag)
         
-        slider.addTarget(self, action: #selector(sliderValueChanged(_:)), for: .valueChanged)
-        numberOfStepsStepper.addTarget(self, action: #selector(stepperValueChanged(_:)), for: .valueChanged)
-        useHapticFeedbackSwitch.addTarget(self, action: #selector(switchValueChanged(_:)), for: .valueChanged)
+        slider.rx.stepValue
+            .map { "\($0)" }
+            .bind(to: stepValueLabel.rx.text)
+            .disposed(by: disposeBag)
         
-        updateLabels()
+        slider.rx.useHapticFeedback
+            .bind(to: useHapticFeedbackSwitch.rx.isOn)
+            .disposed(by: disposeBag)
+        
+        slider.rx.currentStepIndex
+            .map { "\($0)" }
+            .bind(to: currentStepLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        numberOfStepsStepper.rx.value
+            .map { Int($0) }
+            .bind(to: slider.rx.numberOfSteps)
+            .disposed(by: disposeBag)
+        
+        useHapticFeedbackSwitch.rx.isOn
+            .bind(to: slider.rx.useHapticFeedback)
+            .disposed(by: disposeBag)
     }
     
-    private func updateLabels() {
-        valueLabel.text = "\(slider.value)"
-        stepValueLabel.text = "\(slider.stepValue)"
-        numberOfStepsLabel.text = "\(slider.numberOfSteps)"
-        currentStepLabel.text = "\(slider.currentStepIndex)"
-    }
-    
-    @objc private func sliderValueChanged(_ sender: UISlider) {
-        updateLabels()
-    }
-    
-    @objc private func switchValueChanged(_ sender: UISwitch) {
-        slider.useHapticFeedback = sender.isOn
-    }
-    
-    @objc private func stepperValueChanged(_ sender: UIStepper) {
-        slider.numberOfSteps = Int(numberOfStepsStepper.value)
-        slider.value = 0
-        updateLabels()
+    private func subscribe() {
+        slider.rx.numberOfSteps
+            .subscribe(onNext: { [weak self] steps in
+                guard let self = self else { return }
+                self.numberOfStepsStepper.value = Double(steps)
+                self.numberOfStepsLabel.text = "\(steps)"
+            })
+            .disposed(by: disposeBag)
     }
 }

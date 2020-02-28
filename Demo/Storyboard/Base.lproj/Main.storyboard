@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0ao-2s-6Qj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0ao-2s-6Qj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--SteppableSlider-Demo-->
+        <!--SteppableSlider-Demo-Swift-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SteppableSlider_Demo_Swift" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,9 +40,6 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DjL-pZ-BJg">
                                                 <rect key="frame" x="325" y="0.0" width="51" height="31"/>
-                                                <connections>
-                                                    <action selector="switchValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="LPR-vB-89l"/>
-                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -55,7 +52,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vp4-5c-VrY">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vp4-5c-VrY">
                                                 <rect key="frame" x="242" y="0.0" width="30" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="Fbn-cq-CNF"/>
@@ -64,11 +61,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="z4q-LS-YXX">
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="z4q-LS-YXX">
                                                 <rect key="frame" x="280" y="0.0" width="94" height="32"/>
-                                                <connections>
-                                                    <action selector="stepperValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="wDx-U2-fhu"/>
-                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
@@ -119,7 +113,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0i-XE-HlX">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0i-XE-HlX">
                                                 <rect key="frame" x="324" y="0.0" width="50" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="a2y-Y8-bPe"/>
@@ -153,17 +147,14 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="H3U-Cu-Tk9" customClass="SteppableSlider" customModule="SteppableSlider">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="H3U-Cu-Tk9" customClass="SteppableSlider" customModule="SteppableSlider">
                                         <rect key="frame" x="-2" y="162" width="378" height="31"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="useHapticFeedback" value="YES"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="numberOfSteps">
-                                                <integer key="value" value="4"/>
+                                                <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="bAW-HB-qfA"/>
-                                        </connections>
                                     </slider>
                                 </subviews>
                             </stackView>
@@ -180,9 +171,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="SteppableSlider-Demo" id="tMa-S9-nUO"/>
+                    <navigationItem key="navigationItem" title="SteppableSlider-Demo-Swift" id="tMa-S9-nUO"/>
                     <connections>
-                        <outlet property="currentStepLabel" destination="qYk-8C-9PJ" id="LZi-uQ-XK3"/>
+                        <outlet property="currentStepLabel" destination="qYk-8C-9PJ" id="rgw-5W-YsB"/>
                         <outlet property="numberOfStepsLabel" destination="Vp4-5c-VrY" id="D5K-Ad-jUU"/>
                         <outlet property="numberOfStepsStepper" destination="z4q-LS-YXX" id="ajn-w2-UXn"/>
                         <outlet property="slider" destination="H3U-Cu-Tk9" id="HCo-Km-LYx"/>

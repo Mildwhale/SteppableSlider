@@ -35,12 +35,16 @@ import UIKit
         set {
             _numberOfSteps = newValue
             updateStepValue()
+            sendActions(for: .valueChanged)
         }
     }
     /// Determines whether haptic feedback is used when steps change. The default value of this property is true.
     @IBInspectable public var useHapticFeedback: Bool {
         get { return _useHapticFeedback }
-        set { _useHapticFeedback = newValue }
+        set {
+            _useHapticFeedback = newValue
+            sendActions(for: .valueChanged)
+        }
     }
     
     // MARK: Public
