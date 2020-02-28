@@ -19,7 +19,7 @@ let package = Package(
     targets: [
         .target(
             name: "SteppableSlider", 
-            path: "Sources"
+            path: "Sources",
             sources: ["SteppableSlider"]
         ),
         .target(
