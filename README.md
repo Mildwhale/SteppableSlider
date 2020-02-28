@@ -40,7 +40,7 @@ slider.rx.currentIndex
 ## Installation
 ### Carthage
 ```
-github "Mildwhale/SteppableSlider" ~> 0.0.5
+github "Mildwhale/SteppableSlider"
 ```
 
 ### CocoaPods
