@@ -29,7 +29,6 @@ final class ViewController: UIViewController {
     @IBOutlet private var slider: SteppableSlider!
     @IBOutlet private var valueLabel: UILabel!
     @IBOutlet private var useHapticFeedbackSwitch: UISwitch!
-    @IBOutlet private var stepValueLabel: UILabel!
     @IBOutlet private var numberOfStepsLabel: UILabel!
     @IBOutlet private var numberOfStepsStepper: UIStepper!
     @IBOutlet private var currentStepLabel: UILabel!
@@ -54,9 +53,8 @@ final class ViewController: UIViewController {
     
     private func updateLabels() {
         valueLabel.text = "\(slider.value)"
-        stepValueLabel.text = "\(slider.stepValue)"
         numberOfStepsLabel.text = "\(slider.numberOfSteps)"
-        currentStepLabel.text = "\(slider.currentStepIndex)"
+        currentStepLabel.text = "\(slider.currentIndex)"
     }
     
     @objc private func sliderValueChanged(_ sender: UISlider) {

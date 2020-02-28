@@ -31,7 +31,6 @@ final class ViewController: UIViewController {
     @IBOutlet private var slider: SteppableSlider!
     @IBOutlet private var valueLabel: UILabel!
     @IBOutlet private var useHapticFeedbackSwitch: UISwitch!
-    @IBOutlet private var stepValueLabel: UILabel!
     @IBOutlet private var numberOfStepsLabel: UILabel!
     @IBOutlet private var numberOfStepsStepper: UIStepper!
     @IBOutlet private var currentStepLabel: UILabel!
@@ -52,16 +51,11 @@ final class ViewController: UIViewController {
             .bind(to: valueLabel.rx.text)
             .disposed(by: disposeBag)
         
-        slider.rx.stepValue
-            .map { "\($0)" }
-            .bind(to: stepValueLabel.rx.text)
-            .disposed(by: disposeBag)
-        
         slider.rx.useHapticFeedback
             .bind(to: useHapticFeedbackSwitch.rx.isOn)
             .disposed(by: disposeBag)
         
-        slider.rx.currentStepIndex
+        slider.rx.currentIndex
             .map { "\($0)" }
             .bind(to: currentStepLabel.rx.text)
             .disposed(by: disposeBag)

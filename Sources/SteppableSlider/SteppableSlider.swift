@@ -35,7 +35,6 @@ import UIKit
         set {
             _numberOfSteps = newValue
             updateStepValue()
-            sendActions(for: .valueChanged)
         }
     }
     /// Determines whether haptic feedback is used when steps change. The default value of this property is true.
@@ -43,23 +42,20 @@ import UIKit
         get { return _useHapticFeedback }
         set {
             _useHapticFeedback = newValue
-            sendActions(for: .valueChanged)
         }
     }
     
     // MARK: Public
     
     /// Get the index of the current step. This starts at zero.
-    public var currentStepIndex: Int { return _currentStepIndex }
-    /// Get the value of the interval of steps.
-    public var stepValue: Float { return _stepValue }
+    public var currentIndex: Int { return _currentIndex }
 
     // MARK: Private
     private var _numberOfSteps: Int = 0
-    private var _currentStepIndex: Int = 0
+    private var _currentIndex: Int = 0
     private var _stepValue: Float = 0
     private var _useHapticFeedback: Bool = false
-    private var _isStepEnabled: Bool { return stepValue > 0 }
+    private var _isStepEnabled: Bool { return _stepValue > 0 }
     private var _cachedValueForFeedback: Float = 0
 
     // MARK: Override
@@ -75,7 +71,7 @@ import UIKit
                     generator.selectionChanged()
                 }
             }
-            updateCurrentStep(of: newStepValue)
+            updateCurrentIndex(of: newStepValue)
             return newStepValue
         }
         set {
@@ -89,13 +85,20 @@ import UIKit
     }
     
     // MARK: - Function
+    // MARK: Public
+    public func setIndex(_ index: Int) {
+        guard index >= 0, index < numberOfSteps else { return }
+        let nextValue = _stepValue * Float(index)
+        updateCurrentIndex(of: nextValue)
+    }
+    
     // MARK: Private
     private func updateStepValue() {
         _stepValue = _numberOfSteps > 1 ? maximumValue / Float(_numberOfSteps - 1) : 0
     }
     
-    private func updateCurrentStep(of nextValue: Float) {
+    private func updateCurrentIndex(of nextValue: Float) {
         super.value = nextValue
-        _currentStepIndex = Int(round(nextValue / stepValue))
+        _currentIndex = Int(round(nextValue / _stepValue))
     }
 }

@@ -36,6 +36,7 @@ extension Reactive where Base: SteppableSlider {
             return base.numberOfSteps
         }, setter: { base, value in
             base.numberOfSteps = value
+            base.sendActions(for: .valueChanged)
         })
     }
     
@@ -45,48 +46,17 @@ extension Reactive where Base: SteppableSlider {
             return base.useHapticFeedback
         }, setter: { base, value in
             base.useHapticFeedback = value
+            base.sendActions(for: .valueChanged)
         })
     }
     
-    /// Reactive wrapper for `currentStepIndex` property.
-    public var currentStepIndex: Observable<Int> {
-        return Observable<Int>.create { [weak weakControl = base] observer in
-            guard let control = weakControl else {
-                observer.onCompleted()
-                return Disposables.create()
-            }
-
-            observer.on(.next(control.currentStepIndex))
-
-            let event = self.controlEvent(.valueChanged).subscribe(onNext: { _ in
-                if let control = weakControl {
-                    observer.onNext(control.currentStepIndex)
-                }
-            })
-            
-            return Disposables.create(with: event.dispose)
-        }
-        .takeUntil(deallocated)
-    }
-    
-    /// Reactive wrapper for `stepValue` property.
-    public var stepValue: Observable<Float> {
-        return Observable<Float>.create { [weak weakControl = base] observer in
-            guard let control = weakControl else {
-                observer.on(.completed)
-                return Disposables.create()
-            }
-
-            observer.on(.next(control.stepValue))
-
-            let event = self.controlEvent(.valueChanged).subscribe(onNext: { _ in
-                if let control = weakControl {
-                    observer.onNext(control.stepValue)
-                }
-            })
-            
-            return Disposables.create(with: event.dispose)
-        }
-        .takeUntil(deallocated)
+    /// Reactive wrapper for `currentIndex` property.
+    public var currentIndex: ControlProperty<Int> {
+        return base.rx.controlProperty(editingEvents: .valueChanged, getter: { base in
+            return base.currentIndex
+        }, setter: { base, value in
+            base.setIndex(value)
+            base.sendActions(for: .valueChanged)
+        })
     }
 }
