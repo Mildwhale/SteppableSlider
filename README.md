@@ -45,6 +45,10 @@ github "Mildwhale/SteppableSlider" ~> 0.0.5
 ### CocoaPods
 ``` 
 pod 'SteppableSlider', '~> 0.0.5' 
+
+or
+
+pod 'SteppableSlider/RxSwift', '~> 0.0.5' 
 ```
 
 ### Swift Package Manager

@@ -9,9 +9,24 @@ let package = Package(
         .iOS(.v10)
     ],
     products: [
-        .library(name: "SteppableSlider", targets: ["SteppableSlider"])
+        .library(
+            name: "SteppableSlider", 
+            targets: ["SteppableSlider"]),
+        .library(
+            name: "RxSteppableSlider", 
+            targets: ["RxSteppableSlider"])
     ],
     targets: [
-        .target(name: "SteppableSlider", path: "SteppableSlider/Sources"
-        )]
+        .target(
+            name: "SteppableSlider", 
+            path: "Sources"
+            sources: ["SteppableSlider"]
+        ),
+        .target(
+            name: "RxSteppableSlider",
+            dependencies: ["SteppableSlider"],
+            path: "Sources",
+            sources: ["RxSteppableSlider"]
+        )
+    ]
 )
