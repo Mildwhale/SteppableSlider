@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		89DC1514240894A200225AB3 /* SteppableSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 89DC1510240894A200225AB3 /* SteppableSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		89DC1516240894A200225AB3 /* SteppableSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC1513240894A200225AB3 /* SteppableSlider.swift */; };
-		89DC1539240895C600225AB3 /* SteppableSlider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C9D8C124052083006D5955 /* SteppableSlider.framework */; };
 		89DC153E2408965100225AB3 /* RxSteppableSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 89DC1533240895BC00225AB3 /* RxSteppableSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		89DC1540240896AF00225AB3 /* SteppableSlider+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC153F240896AF00225AB3 /* SteppableSlider+Rx.swift */; };
+		C6C55319240943DE00E2FA70 /* SteppableSlider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C9D8C124052083006D5955 /* SteppableSlider.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89DC1539240895C600225AB3 /* SteppableSlider.framework in Frameworks */,
+				C6C55319240943DE00E2FA70 /* SteppableSlider.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,20 +7,25 @@
 #
 
 Pod::Spec.new do |spec|
-  spec.name           = "SteppableSlider"
-  spec.version        = "0.0.6"
-  spec.summary        = "A custom UISlider with step for iOS."
-  spec.homepage       = "https://github.com/Mildwhale/SteppableSlider"
-  spec.license        = { :type => 'MIT', :file => 'LICENSE' }
-  spec.author         = { "Kyujin Kim" => "mildwhale@gmail.com" }
-  spec.swift_versions = ['4.0']
-  spec.platform       = :ios, "10.0"
-  spec.source         = { :git => "https://github.com/Mildwhale/SteppableSlider.git", :tag => "#{spec.version}" }
-  spec.source_files   = "Sources/SteppableSlider/"
-  spec.framework      = "UIKit"
+  spec.name            = "SteppableSlider"
+  spec.version         = "0.0.8"
+  spec.summary         = "A custom UISlider with step for iOS."
+  spec.homepage        = "https://github.com/Mildwhale/SteppableSlider"
+  spec.license         = { :type => 'MIT', :file => 'LICENSE' }
+  spec.author          = { "Kyujin Kim" => "mildwhale@gmail.com" }
+  spec.swift_versions  = ['4.0']
+  spec.platform        = :ios, "10.0"
+  spec.default_subspec = "Core"
+  spec.source          = { :git => "https://github.com/Mildwhale/SteppableSlider.git", :tag => "#{spec.version}" }
+
+  spec.subspec "Core" do |ss|
+    ss.source_files = "Sources/SteppableSlider/"
+    ss.framework    = "UIKit"
+  end
 
   spec.subspec "RxSwift" do |rxspec|
     rxspec.source_files = "Sources/RxSteppableSlider/"
+    rxspec.dependency "SteppableSlider/Core"
     rxspec.dependency "RxSwift", "~> 5.0"
     rxspec.dependency "RxCocoa"
   end
