@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
   spec.name           = "SteppableSlider"
-  spec.version        = "0.0.5"
+  spec.version        = "0.0.6"
   spec.summary        = "A custom UISlider with step for iOS."
   spec.homepage       = "https://github.com/Mildwhale/SteppableSlider"
   spec.license        = { :type => 'MIT', :file => 'LICENSE' }
