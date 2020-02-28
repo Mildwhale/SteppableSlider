@@ -25,9 +25,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
-#if !COCOAPODS
 import SteppableSlider
-#endif
 
 extension Reactive where Base: SteppableSlider {
     /// Reactive wrapper for `numberOfSteps` property.
