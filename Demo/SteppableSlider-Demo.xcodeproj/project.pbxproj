@@ -7,16 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		890ECA1A2408A385002136DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89C9D8FF24052230006D5955 /* Assets.xcassets */; };
+		890ECA302408AD90002136DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890ECA2B2408AD90002136DD /* AppDelegate.swift */; };
+		890ECA312408AD90002136DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890ECA2D2408AD90002136DD /* ViewController.swift */; };
+		890ECA322408AE38002136DD /* RxSteppableSlider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 890ECA202408A458002136DD /* RxSteppableSlider.framework */; };
+		890ECA332408AE38002136DD /* RxSteppableSlider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 890ECA202408A458002136DD /* RxSteppableSlider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		890ECA452408AF09002136DD /* RxBlocking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 890ECA382408AE51002136DD /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		890ECA462408AF09002136DD /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 890ECA352408AE51002136DD /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		890ECA472408AF09002136DD /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 890ECA372408AE51002136DD /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		890ECA482408AF09002136DD /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 890ECA392408AE51002136DD /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		890ECA492408AF09002136DD /* RxTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 890ECA362408AE51002136DD /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		890ECA4F2408C410002136DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 890ECA4B2408C410002136DD /* LaunchScreen.storyboard */; };
+		890ECA502408C410002136DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 890ECA4D2408C410002136DD /* Main.storyboard */; };
+		890ECA582408C475002136DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 890ECA4B2408C410002136DD /* LaunchScreen.storyboard */; };
+		890ECA592408C475002136DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 890ECA4D2408C410002136DD /* Main.storyboard */; };
 		89C9D8F12405215B006D5955 /* SteppableSlider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C9D8F02405215B006D5955 /* SteppableSlider.framework */; };
 		89C9D8F22405215B006D5955 /* SteppableSlider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 89C9D8F02405215B006D5955 /* SteppableSlider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		89C9D90524052230006D5955 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89C9D8FA24052230006D5955 /* LaunchScreen.storyboard */; };
-		89C9D90624052230006D5955 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89C9D8FC24052230006D5955 /* Main.storyboard */; };
 		89C9D90724052230006D5955 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89C9D8FF24052230006D5955 /* Assets.xcassets */; };
 		89C9D90824052230006D5955 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9D90024052230006D5955 /* AppDelegate.swift */; };
 		89C9D90924052230006D5955 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9D90224052230006D5955 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		890ECA342408AE38002136DD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				890ECA452408AF09002136DD /* RxBlocking.framework in Embed Frameworks */,
+				890ECA462408AF09002136DD /* RxCocoa.framework in Embed Frameworks */,
+				890ECA472408AF09002136DD /* RxRelay.framework in Embed Frameworks */,
+				890ECA482408AF09002136DD /* RxSwift.framework in Embed Frameworks */,
+				890ECA492408AF09002136DD /* RxTest.framework in Embed Frameworks */,
+				890ECA332408AE38002136DD /* RxSteppableSlider.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		89C9D8F32405215B006D5955 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -31,10 +59,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		890ECA062408A044002136DD /* SteppableSlider-Demo-RxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SteppableSlider-Demo-RxSwift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		890ECA202408A458002136DD /* RxSteppableSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSteppableSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		890ECA2A2408AD90002136DD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		890ECA2B2408AD90002136DD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		890ECA2D2408AD90002136DD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		890ECA352408AE51002136DD /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = ../Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		890ECA362408AE51002136DD /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = ../Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
+		890ECA372408AE51002136DD /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = ../Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		890ECA382408AE51002136DD /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = ../Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		890ECA392408AE51002136DD /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		890ECA4C2408C410002136DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		890ECA4E2408C410002136DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		89C9D8D824052100006D5955 /* SteppableSlider-Demo-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SteppableSlider-Demo-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89C9D8F02405215B006D5955 /* SteppableSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SteppableSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		89C9D8FB24052230006D5955 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		89C9D8FD24052230006D5955 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		89C9D8FF24052230006D5955 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89C9D90024052230006D5955 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89C9D90224052230006D5955 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +81,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		890ECA032408A044002136DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				890ECA322408AE38002136DD /* RxSteppableSlider.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		89C9D8D524052100006D5955 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -54,11 +100,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		890ECA1F2408A3D0002136DD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				89C9D90324052230006D5955 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		890ECA272408AD90002136DD /* SteppableSlider-Demo-RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				890ECA2B2408AD90002136DD /* AppDelegate.swift */,
+				890ECA2C2408AD90002136DD /* ViewController */,
+				890ECA292408AD90002136DD /* Supporting Files */,
+			);
+			path = "SteppableSlider-Demo-RxSwift";
+			sourceTree = "<group>";
+		};
+		890ECA292408AD90002136DD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				890ECA2A2408AD90002136DD /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		890ECA2C2408AD90002136DD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				890ECA2D2408AD90002136DD /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		890ECA4A2408C410002136DD /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				890ECA4B2408C410002136DD /* LaunchScreen.storyboard */,
+				890ECA4D2408C410002136DD /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		89C9D8CF24052100006D5955 = {
 			isa = PBXGroup;
 			children = (
 				C6A6211B240817B6003B4144 /* README.md */,
 				89C9D8F724052230006D5955 /* Demo */,
+				890ECA4A2408C410002136DD /* Storyboard */,
+				89C9D8FE24052230006D5955 /* Resources */,
 				89C9D8D924052100006D5955 /* Products */,
 				89C9D8EF2405215B006D5955 /* Frameworks */,
 			);
@@ -68,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				89C9D8D824052100006D5955 /* SteppableSlider-Demo-Swift.app */,
+				890ECA062408A044002136DD /* SteppableSlider-Demo-RxSwift.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,6 +167,12 @@
 		89C9D8EF2405215B006D5955 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				890ECA382408AE51002136DD /* RxBlocking.framework */,
+				890ECA352408AE51002136DD /* RxCocoa.framework */,
+				890ECA372408AE51002136DD /* RxRelay.framework */,
+				890ECA392408AE51002136DD /* RxSwift.framework */,
+				890ECA362408AE51002136DD /* RxTest.framework */,
+				890ECA202408A458002136DD /* RxSteppableSlider.framework */,
 				89C9D8F02405215B006D5955 /* SteppableSlider.framework */,
 			);
 			name = Frameworks;
@@ -84,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				89C9D8F824052230006D5955 /* SteppableSlider-Demo-Swift */,
+				890ECA272408AD90002136DD /* SteppableSlider-Demo-RxSwift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -92,21 +191,10 @@
 			isa = PBXGroup;
 			children = (
 				89C9D90024052230006D5955 /* AppDelegate.swift */,
-				89C9D90324052230006D5955 /* Info.plist */,
 				89C9D90124052230006D5955 /* ViewController */,
-				89C9D8F924052230006D5955 /* Storyboard */,
-				89C9D8FE24052230006D5955 /* Resources */,
+				890ECA1F2408A3D0002136DD /* Supporting Files */,
 			);
 			path = "SteppableSlider-Demo-Swift";
-			sourceTree = "<group>";
-		};
-		89C9D8F924052230006D5955 /* Storyboard */ = {
-			isa = PBXGroup;
-			children = (
-				89C9D8FA24052230006D5955 /* LaunchScreen.storyboard */,
-				89C9D8FC24052230006D5955 /* Main.storyboard */,
-			);
-			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		89C9D8FE24052230006D5955 /* Resources */ = {
@@ -128,6 +216,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		890ECA052408A044002136DD /* SteppableSlider-Demo-RxSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 890ECA192408A045002136DD /* Build configuration list for PBXNativeTarget "SteppableSlider-Demo-RxSwift" */;
+			buildPhases = (
+				890ECA022408A044002136DD /* Sources */,
+				890ECA032408A044002136DD /* Frameworks */,
+				890ECA042408A044002136DD /* Resources */,
+				890ECA342408AE38002136DD /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SteppableSlider-Demo-RxSwift";
+			productName = "SteppableSlider-Demo-RxSwift";
+			productReference = 890ECA062408A044002136DD /* SteppableSlider-Demo-RxSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
 		89C9D8D724052100006D5955 /* SteppableSlider-Demo-Swift */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89C9D8EC24052102006D5955 /* Build configuration list for PBXNativeTarget "SteppableSlider-Demo-Swift" */;
@@ -156,6 +262,9 @@
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Kyujin Kim";
 				TargetAttributes = {
+					890ECA052408A044002136DD = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
 					89C9D8D724052100006D5955 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
@@ -175,24 +284,44 @@
 			projectRoot = "";
 			targets = (
 				89C9D8D724052100006D5955 /* SteppableSlider-Demo-Swift */,
+				890ECA052408A044002136DD /* SteppableSlider-Demo-RxSwift */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		890ECA042408A044002136DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				890ECA592408C475002136DD /* Main.storyboard in Resources */,
+				890ECA582408C475002136DD /* LaunchScreen.storyboard in Resources */,
+				890ECA1A2408A385002136DD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		89C9D8D624052100006D5955 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89C9D90524052230006D5955 /* LaunchScreen.storyboard in Resources */,
+				890ECA502408C410002136DD /* Main.storyboard in Resources */,
 				89C9D90724052230006D5955 /* Assets.xcassets in Resources */,
-				89C9D90624052230006D5955 /* Main.storyboard in Resources */,
+				890ECA4F2408C410002136DD /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		890ECA022408A044002136DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				890ECA312408AD90002136DD /* ViewController.swift in Sources */,
+				890ECA302408AD90002136DD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		89C9D8D424052100006D5955 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -205,18 +334,18 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		89C9D8FA24052230006D5955 /* LaunchScreen.storyboard */ = {
+		890ECA4B2408C410002136DD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				89C9D8FB24052230006D5955 /* Base */,
+				890ECA4C2408C410002136DD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		89C9D8FC24052230006D5955 /* Main.storyboard */ = {
+		890ECA4D2408C410002136DD /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				89C9D8FD24052230006D5955 /* Base */,
+				890ECA4E2408C410002136DD /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -224,6 +353,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		890ECA172408A045002136DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS";
+				INFOPLIST_FILE = "$(SRCROOT)/Demo/SteppableSlider-Demo-RxSwift/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mildwhale.SteppableSlider-Demo-RxSwift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		890ECA182408A045002136DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../Carthage/Build/iOS";
+				INFOPLIST_FILE = "$(SRCROOT)/Demo/SteppableSlider-Demo-RxSwift/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mildwhale.SteppableSlider-Demo-RxSwift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		89C9D8EA24052102006D5955 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -344,7 +513,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "$(SRCROOT)/Demo/SteppableSlider-Demo-Swift/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Demo/SteppableSlider-Demo-Swift/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -363,7 +532,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "$(SRCROOT)/Demo/SteppableSlider-Demo-Swift/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Demo/SteppableSlider-Demo-Swift/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -379,6 +548,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		890ECA192408A045002136DD /* Build configuration list for PBXNativeTarget "SteppableSlider-Demo-RxSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				890ECA172408A045002136DD /* Debug */,
+				890ECA182408A045002136DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		89C9D8D324052100006D5955 /* Build configuration list for PBXProject "SteppableSlider-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

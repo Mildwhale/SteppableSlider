@@ -1,34 +1,54 @@
 # SteppableSlider
+`SteppableSlider` is a custom UISlider that provides step and support `Haptic feedback` on `.valueChanged`.
 
-## Features
-SteppableSlider is a custom UISlider that provides steps.  
 ![image](https://mildwhale.github.io/assets/images/steppableslider-sample.gif)
 
-## Examples
-### Set slider
+`RxSwift` is supported.
+
+## Usage
+You can add `SteppableSlider` use code or storybord. Its fully compatible for interface builder.
+
+### Swift
 ```swift
+import SteppableSlider
+
 let slider = SteppableSlider()
 slider.numberOfSteps = 4
-slider.useHapticFeedback = true // Default
 slider.addTarget(self, action: #selector(sliderValueChanged(_:)), for: .valueChanged)
-```
 
-### Get step index
-```swift
 @objc func sliderValueChanged(_ sender: SteppableSlider) {
     print(sender.currentStepIndex) // 0 ~ 3
 }
 ```
 
+### RxSwift
+```swift
+import SteppableSlider
+import RxSteppableSlider
+
+let slider = SteppableSlider()
+slider.numberOfSteps = 4
+
+slider.rx.currentIndex
+    .subscribe(onNext: { [weak self] index in
+        print(index) // 0 ~ 3
+    })
+    .disposed(by: disposeBag)
+```
+
 ## Installation
 ### Carthage
 ```
-github "Mildwhale/SteppableSlider" ~> 0.0.1
+github "Mildwhale/SteppableSlider" ~> 0.0.5
 ```
 
 ### CocoaPods
 ``` 
-pod 'SteppableSlider', '~> 0.0.1' 
+pod 'SteppableSlider', '~> 0.0.5' 
+
+or
+
+pod 'SteppableSlider/RxSwift', '~> 0.0.5' 
 ```
 
 ### Swift Package Manager

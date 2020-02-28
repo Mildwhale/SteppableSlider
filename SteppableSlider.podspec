@@ -16,6 +16,12 @@ Pod::Spec.new do |spec|
   spec.swift_versions = ['4.0']
   spec.platform       = :ios, "10.0"
   spec.source         = { :git => "https://github.com/Mildwhale/SteppableSlider.git", :tag => "#{spec.version}" }
-  spec.source_files   = "SteppableSlider/Sources/*.swift"
+  spec.source_files   = "Sources/SteppableSlider/*.swift"
   spec.framework      = "UIKit"
+
+  spec.subspec "RxSwift" do |rxspec|
+    rxspec.source_files = "Sources/RxSteppableSlider/*.swift"
+    rxspec.dependency "RxSwift", "~> 5.0"
+  end
+
 end

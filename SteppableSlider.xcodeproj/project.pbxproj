@@ -7,15 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		89C9D8C624052083006D5955 /* SteppableSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C9D8C424052083006D5955 /* SteppableSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		89C9D8CE240520A8006D5955 /* SteppableSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C9D8CD240520A8006D5955 /* SteppableSlider.swift */; };
+		89DC1514240894A200225AB3 /* SteppableSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 89DC1510240894A200225AB3 /* SteppableSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		89DC1516240894A200225AB3 /* SteppableSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC1513240894A200225AB3 /* SteppableSlider.swift */; };
+		89DC1539240895C600225AB3 /* SteppableSlider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C9D8C124052083006D5955 /* SteppableSlider.framework */; };
+		89DC153E2408965100225AB3 /* RxSteppableSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 89DC1533240895BC00225AB3 /* RxSteppableSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		89DC1540240896AF00225AB3 /* SteppableSlider+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC153F240896AF00225AB3 /* SteppableSlider+Rx.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		89DC153B240895C600225AB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89C9D8B824052083006D5955 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 89C9D8C024052083006D5955;
+			remoteInfo = SteppableSlider;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		89C9D8C124052083006D5955 /* SteppableSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SteppableSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		89C9D8C424052083006D5955 /* SteppableSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SteppableSlider.h; sourceTree = "<group>"; };
-		89C9D8C524052083006D5955 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		89C9D8CD240520A8006D5955 /* SteppableSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteppableSlider.swift; sourceTree = "<group>"; };
+		89DC1510240894A200225AB3 /* SteppableSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteppableSlider.h; sourceTree = "<group>"; };
+		89DC1511240894A200225AB3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89DC1513240894A200225AB3 /* SteppableSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SteppableSlider.swift; sourceTree = "<group>"; };
+		89DC1531240895BC00225AB3 /* RxSteppableSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSteppableSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89DC1533240895BC00225AB3 /* RxSteppableSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxSteppableSlider.h; sourceTree = "<group>"; };
+		89DC153F240896AF00225AB3 /* SteppableSlider+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SteppableSlider+Rx.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,14 +42,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		89DC152E240895BC00225AB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89DC1539240895C600225AB3 /* SteppableSlider.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		89C9D8B724052083006D5955 = {
 			isa = PBXGroup;
 			children = (
-				89C9D8C324052083006D5955 /* SteppableSlider */,
+				89DC150D240894A200225AB3 /* Sources */,
 				89C9D8C224052083006D5955 /* Products */,
+				89DC15262408950700225AB3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -41,26 +66,52 @@
 			isa = PBXGroup;
 			children = (
 				89C9D8C124052083006D5955 /* SteppableSlider.framework */,
+				89DC1531240895BC00225AB3 /* RxSteppableSlider.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		89C9D8C324052083006D5955 /* SteppableSlider */ = {
+		89DC150D240894A200225AB3 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				89C9D8C424052083006D5955 /* SteppableSlider.h */,
-				89C9D8C524052083006D5955 /* Info.plist */,
-				89C9D8CC2405208C006D5955 /* Sources */,
+				89DC1512240894A200225AB3 /* SteppableSlider */,
+				89DC150E240894A200225AB3 /* RxSteppableSlider */,
+				89DC150F240894A200225AB3 /* Supporting Files */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		89DC150E240894A200225AB3 /* RxSteppableSlider */ = {
+			isa = PBXGroup;
+			children = (
+				89DC153F240896AF00225AB3 /* SteppableSlider+Rx.swift */,
+			);
+			path = RxSteppableSlider;
+			sourceTree = "<group>";
+		};
+		89DC150F240894A200225AB3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				89DC1510240894A200225AB3 /* SteppableSlider.h */,
+				89DC1533240895BC00225AB3 /* RxSteppableSlider.h */,
+				89DC1511240894A200225AB3 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		89DC1512240894A200225AB3 /* SteppableSlider */ = {
+			isa = PBXGroup;
+			children = (
+				89DC1513240894A200225AB3 /* SteppableSlider.swift */,
 			);
 			path = SteppableSlider;
 			sourceTree = "<group>";
 		};
-		89C9D8CC2405208C006D5955 /* Sources */ = {
+		89DC15262408950700225AB3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				89C9D8CD240520A8006D5955 /* SteppableSlider.swift */,
 			);
-			path = Sources;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,7 +121,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89C9D8C624052083006D5955 /* SteppableSlider.h in Headers */,
+				89DC1514240894A200225AB3 /* SteppableSlider.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89DC152C240895BC00225AB3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89DC153E2408965100225AB3 /* RxSteppableSlider.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +154,25 @@
 			productReference = 89C9D8C124052083006D5955 /* SteppableSlider.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		89DC1530240895BC00225AB3 /* RxSteppableSlider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89DC1536240895BC00225AB3 /* Build configuration list for PBXNativeTarget "RxSteppableSlider" */;
+			buildPhases = (
+				89DC152C240895BC00225AB3 /* Headers */,
+				89DC152D240895BC00225AB3 /* Sources */,
+				89DC152E240895BC00225AB3 /* Frameworks */,
+				89DC152F240895BC00225AB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89DC153C240895C600225AB3 /* PBXTargetDependency */,
+			);
+			name = RxSteppableSlider;
+			productName = RxSteppableSlider;
+			productReference = 89DC1531240895BC00225AB3 /* RxSteppableSlider.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -105,6 +183,10 @@
 				ORGANIZATIONNAME = "Kyujin Kim";
 				TargetAttributes = {
 					89C9D8C024052083006D5955 = {
+						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
+					};
+					89DC1530240895BC00225AB3 = {
 						CreatedOnToolsVersion = 11.2.1;
 						LastSwiftMigration = 1120;
 					};
@@ -124,12 +206,20 @@
 			projectRoot = "";
 			targets = (
 				89C9D8C024052083006D5955 /* SteppableSlider */,
+				89DC1530240895BC00225AB3 /* RxSteppableSlider */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		89C9D8BF24052083006D5955 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89DC152F240895BC00225AB3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -143,11 +233,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89C9D8CE240520A8006D5955 /* SteppableSlider.swift in Sources */,
+				89DC1516240894A200225AB3 /* SteppableSlider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89DC152D240895BC00225AB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89DC1540240896AF00225AB3 /* SteppableSlider+Rx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		89DC153C240895C600225AB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 89C9D8C024052083006D5955 /* SteppableSlider */;
+			targetProxy = 89DC153B240895C600225AB3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		89C9D8C724052083006D5955 /* Debug */ = {
@@ -274,12 +380,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SteppableSlider/Info.plist;
+				INFOPLIST_FILE = "Sources/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -288,10 +396,12 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Mildwhale.SteppableSlider;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -299,12 +409,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SteppableSlider/Info.plist;
+				INFOPLIST_FILE = "Sources/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -313,9 +425,78 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Mildwhale.SteppableSlider;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		89DC1537240895BC00225AB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/Carthage/Build/iOS/",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Sources/Supporting FIles/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Mildwhale.RxSteppableSlider;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		89DC1538240895BC00225AB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/Carthage/Build/iOS/",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Sources/Supporting FIles/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Mildwhale.RxSteppableSlider;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -336,6 +517,15 @@
 			buildConfigurations = (
 				89C9D8CA24052083006D5955 /* Debug */,
 				89C9D8CB24052083006D5955 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89DC1536240895BC00225AB3 /* Build configuration list for PBXNativeTarget "RxSteppableSlider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89DC1537240895BC00225AB3 /* Debug */,
+				89DC1538240895BC00225AB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
