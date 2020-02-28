@@ -54,6 +54,10 @@ pod 'SteppableSlider/RxSwift', '~> 0.1.0'
 
 ### Swift Package Manager
 ```
+https://github.com/Mildwhale/SteppableSlider.git
+
+or
+
 dependencies: [
     .package(url: "https://github.com/Mildwhale/SteppableSlider.git")
 ]
