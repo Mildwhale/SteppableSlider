@@ -16,6 +16,9 @@ let package = Package(
             name: "RxSteppableSlider", 
             targets: ["RxSteppableSlider"])
     ],
+    dependencies: [
+        .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "5.0.0"))
+    ],
     targets: [
         .target(
             name: "SteppableSlider", 
@@ -24,7 +27,7 @@ let package = Package(
         ),
         .target(
             name: "RxSteppableSlider",
-            dependencies: ["SteppableSlider"],
+            dependencies: ["SteppableSlider", "RxSwift", "RxCocoa"],
             path: "Sources",
             sources: ["RxSteppableSlider"]
         )
