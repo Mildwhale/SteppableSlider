@@ -1,9 +1,11 @@
 # SteppableSlider
-`SteppableSlider` is a custom UISlider that provides step and support `Haptic feedback` on `.valueChanged`.
+`SteppableSlider` is a custom UISlider that provides step.
 
 ![image](https://mildwhale.github.io/assets/images/steppableslider-sample.gif)
 
-`RxSwift` is supported.
+## Features
+* `RxSwift` is supported.
+* Support `Haptic feedback` on `.valueChanged`.
 
 ## Usage
 You can use `SteppableSlider` with code or storyboard. Its fully compatible for interface builder.
