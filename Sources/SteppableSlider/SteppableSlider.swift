@@ -57,6 +57,7 @@ import UIKit
     private var _useHapticFeedback: Bool = false
     private var _isStepEnabled: Bool { return _stepValue > 0 }
     private var _cachedValueForFeedback: Float = 0
+    private var _observation: NSKeyValueObservation?
 
     // MARK: Override
     override open var value: Float {
@@ -98,7 +99,6 @@ import UIKit
     }
     
     private func updateCurrentIndex(of nextValue: Float) {
-        super.value = nextValue
         _currentIndex = Int(round(nextValue / _stepValue))
     }
 }
