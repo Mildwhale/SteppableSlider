@@ -38,18 +38,13 @@ slider.rx.currentIndex
 ```
 
 ## Installation
-### Carthage
-```
-github "Mildwhale/SteppableSlider" ~> 0.1.0
-```
-
 ### CocoaPods
 ``` 
-pod 'SteppableSlider', '~> 0.1.0'
+pod 'SteppableSlider', '~> 0.1.1'
 
 or 
 
-pod 'SteppableSlider/RxSwift', '~> 0.1.0'
+pod 'SteppableSlider/RxSwift', '~> 0.1.1'
 ```
 
 ### Swift Package Manager
